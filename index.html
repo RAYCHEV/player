@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Audio Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="player-container">
+        <h1>Web Audio Player</h1>
+
+        <!-- Folder and File Selection -->
+        <div class="selector">
+            <label for="audio-folder">Audio Folder:</label>
+            <input type="file" id="audio-folder" webkitdirectory directory multiple>
+        </div>
+
+        <div class="selector">
+            <label for="audio-file">Audio File:</label>
+            <select id="audio-file">
+                <option value="">Select a file...</option>
+            </select>
+        </div>
+
+        <!-- Playback Controls -->
+        <div id="controls">
+            <button id="play-button">Play</button>
+            <button id="pause-button" disabled>Pause</button>
+            <button id="stop-button" disabled>Stop</button>
+        </div>
+
+        <!-- Volume Control -->
+        <div id="volume-control">
+            <label for="volume-slider">Volume:</label>
+            <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.5">
+        </div>
+
+        <!-- Scheduling Controls -->
+        <div id="schedule-control">
+            <label for="play-schedule">Play at:</label>
+            <input type="time" id="play-schedule">
+            <button id="schedule-button">Set Schedule</button>
+        </div>
+
+        <p id="status"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
