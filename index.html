@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Audio Player</title>
+    <title>Enhanced Web Audio Player</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="player-container">
-        <h1>Web Audio Player</h1>
+        <h1>Audio Player</h1>
 
         <!-- Folder and File Selection -->
         <div class="selector">
-            <label for="audio-folder">Audio Folder:</label>
+            <label for="audio-folder">Select Audio Folder:</label>
             <input type="file" id="audio-folder" webkitdirectory directory multiple>
         </div>
 
@@ -23,24 +23,25 @@
             </select>
         </div>
 
-        <!-- Playback Controls -->
+        <!-- Playback Controls with Icons -->
         <div id="controls">
-            <button id="play-button">Play</button>
-            <button id="pause-button" disabled>Pause</button>
-            <button id="stop-button" disabled>Stop</button>
+            <button id="play-button"><span>▶️</span> Play</button>
+            <button id="pause-button" disabled><span>⏸️</span> Pause</button>
+            <button id="stop-button" disabled><span>⏹️</span> Stop</button>
         </div>
 
-        <!-- Volume Control -->
+        <!-- Volume Control with Indicator -->
         <div id="volume-control">
             <label for="volume-slider">Volume:</label>
             <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.5">
+            <span id="volume-level">50%</span>
         </div>
 
-        <!-- Scheduling Controls -->
+        <!-- Scheduling Controls with Clearer UI -->
         <div id="schedule-control">
-            <label for="play-schedule">Play at:</label>
+            <label for="play-schedule">Set Scheduled Playback:</label>
             <input type="time" id="play-schedule">
-            <button id="schedule-button">Set Schedule</button>
+            <button id="schedule-button">Schedule</button>
         </div>
 
         <p id="status"></p>
